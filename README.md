@@ -10,4 +10,9 @@ The goal of this challenge/project was to create a coding quiz.
 
 4. At the end, the player can view highscores from highest to the lowest score. They have the option to clear the highscore. 
 
+GitHub: https://github.com/hlee92/Code-Quiz
+Deployed: https://hlee92.github.io/Code-Quiz/
+
+
+
 ![Code Quiz Screenshot](https://user-images.githubusercontent.com/91634095/159185537-689a2f23-670b-4536-bd7e-555d15f028eb.jpg)
