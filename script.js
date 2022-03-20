@@ -154,15 +154,21 @@ function saveHighScore() {
     var newScore = {
         userScore: score,
         initials: initials
-    };
+    }
 
-    var highscores = [];
+    var highscores = localStorage.getItem("highscores");
+    if (highscores === null) {
+        highscores = [];
+    } else {
+        highscores = JSON.parse(highscores);
+    }
     highscores.push(newScore);
+    var newHighScore = JSON.stringify(highscores);
+    localStorage.setItem("highscores", newHighScore);
 
-    window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
     window.location.href = "highscores.html";
-    
+
 }
 
 function checkForEnter(event) {
@@ -176,7 +182,3 @@ beginButton.onclick = startQuiz;
 initialsEl.onkeyup = checkForEnter;
 
 
-
-//use localstorage getItem to get highscores and display for users
-//use eventlistener in clear highscores
-//onclick use key of high scores to clear out 

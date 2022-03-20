@@ -1,24 +1,21 @@
 function printHighScores() {
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = localStorage.getItem("highscores");
+    highscores = JSON.parse(highscores);
 
-    highscores.sort(function(x, y) {
-        return y.score - x.score;
-    });
-
-    highscores.forEach(function(highscores) {
+    highscores.forEach(function (highscores) {
         var liTag = document.createElement("li");
-        liTag.textContent = highscores.initials + " - " + highscores.highscores;
+        liTag.textContent = highscores.initials + " - " + highscores.userScore;
 
-        var olEl = document.getElementById("highscores");
-        olEl.appendChild(liTag);
-        });
-    }
+        var highscoresOlEl = document.getElementById("highscoresOl");
+        highscoresOlEl.appendChild(liTag);
+    });
+}
 
-    function clearHighscores() {
-        window.localStorage.removeItem("highscores");
-        window.location.reload();
-    }
+function clearHighscores() {
+    window.localStorage.removeItem("highscores");
+    window.location.reload();
+}
 
-    document.getElementById("clear").onclick = clearHighscores;
+document.getElementById("clear").onclick = clearHighscores;
 
-    printHighScores();
+printHighScores();
