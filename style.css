@@ -1,0 +1,76 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.highscores {
+    float: left;
+}
+
+div {
+display: black;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color:rgb(206, 60, 126);
+}
+
+.timer {
+    text-align: right;
+}
+
+.container {
+    margin: 95px auto 0 auto;
+    max-width: 550px;
+}
+
+.begin {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    display: block;
+}
+
+h2 {
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+button {
+    display: inline-block;
+    margin: 7px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+    border-radius: 6px;
+    padding: 3px 11px;
+    color: black;
+    border: 0;
+    transition: background-color 0.2s;
+}
+
+.choices button {
+    display: block;
+}
+
+.choices button:hover {
+    color: rgb(206, 60, 126);
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
